@@ -1,13 +1,14 @@
 #!/bin/bash
-usuario=$1
-grupo=$2
-useradd -m -p "hola"  $usuario 2> error.txt
+pi=$1
+Lab1=$2
+useradd -m -p "hola"  $pi 2> error.txt
 cat error.txt
 
-groupadd $grupo  2> error2.txt
+groupadd $Lab1  2> error2.txt
 
 cat error2.txt
-usermod  -a -G $grupo $usuario
-usermod  -a -G $grupo $USER
-chown marisoli:$grupo main.sh
-chmod 770 main.sh
+usermod  -a -G $Lab1 $pi
+usermod  -a -G $Lab1 $USER
+chown :$Lab1 main.sh
+#Se le asignan todos los permisos inluyendo el de ejecucion a los miembros del grupo
+chmod 070 main_new.sh
