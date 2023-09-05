@@ -9,6 +9,6 @@ groupadd $Lab1  2> error2.txt
 cat error2.txt
 usermod  -a -G $Lab1 $pi
 usermod  -a -G $Lab1 $USER
-chown :$Lab1 main.sh
+chown :$Lab1 main_new.sh
 #Se le asignan todos los permisos inluyendo el de ejecucion a los miembros del grupo
 chmod 070 main_new.sh
